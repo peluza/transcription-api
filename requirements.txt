@@ -1,0 +1,19 @@
+# --- Framework de la API ---
+fastapi
+uvicorn[standard]
+python-multipart
+
+# --- WhisperX y sus dependencias principales ---
+# Instalará la última versión estable desde PyPI
+whisperx
+
+# WhisperX usa faster-whisper, que a su vez necesita ctranslate2
+ctranslate2
+
+# Pyannote para la diarización
+pyannote.audio>=3.1.1
+
+# Dependencias de PyTorch para CPU.
+# No es necesario especificar la versión de CUDA.
+torch
+torchaudio
