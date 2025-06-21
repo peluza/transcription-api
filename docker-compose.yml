@@ -1,0 +1,20 @@
+# transcription-api/docker-compose.yml
+services:
+  transcription-api:
+    build: .
+    ports:
+      - "8002:8000"
+    restart: unless-stopped
+    environment:
+      # Pega aquí el token que copiaste de Hugging Face
+      - HF_TOKEN=token_de_hugging_face
+    # Hugging Face
+    
+    # --- SECCIÓN OPCIONAL PARA GPU NVIDIA ---
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
