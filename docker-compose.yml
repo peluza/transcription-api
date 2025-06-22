@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     environment:
       # Pega aquí el token que copiaste de Hugging Face
-      - HF_TOKEN=token_de_hugging_face
+      - HF_TOKEN=${HF_TOKEN}
     # Hugging Face
     
     # --- SECCIÓN OPCIONAL PARA GPU NVIDIA ---
